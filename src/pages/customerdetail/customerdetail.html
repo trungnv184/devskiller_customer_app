@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mobiliar Customer Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+	  <ion-card *ngIf="customer">
+        <ion-card-header class="header-info">CUSTOMER INFORMATION</ion-card-header>
+        <ion-card-content>            
+            <p>FirstName: {{ customer.firstName }}</p>
+            <p>LastName : {{ customer.lastName }}</p>
+            <p>Gender:{{ customer.gender | genderFormat }}</p>
+            <p>Street: {{ customer.address.street }}</p>
+            <p>Zip: {{ customer.address.zip }}</p>
+            <p>Place: {{ customer.address.place }}</p>
+            <p>Country: {{ customer.address.country }}</p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
